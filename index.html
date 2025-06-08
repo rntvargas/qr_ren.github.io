@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generador de QR</title>
+    <title>QR Code Generator</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>Generador de Código QR</h1>
-        <input id="qr" type="text" placeholder="Ingresa una URL o texto">
-        <img id="qrimg" alt="QR Code">
-        <button onclick="generarQR()">Generar QR</button>
+        <h1>⚡ QR CODE GENERATOR ⚡</h1>
+        <input id="qr" type="text" placeholder="Escribe tu enlace o mensaje...">
+        <button onclick="generarQR()">GENERAR</button>
+        <div class="qr-box">
+            <img id="qrimg" alt="QR Code">
+        </div>
     </div>
 
     <script>
@@ -19,9 +22,10 @@
             const input = document.getElementById('qr').value.trim();
             const qrimg = document.getElementById('qrimg');
             if (input !== "") {
-                qrimg.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(input)}`;
+                qrimg.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(input)}`;
             }
         }
     </script>
 </body>
 </html>
+
