@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QR Code Generator</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QR Code Generator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
+  <main class="wrapper">
     <div class="container">
-        <h1>⚡ QR CODE GENERATOR ⚡</h1>
-        <input id="qr" type="text" placeholder="Escribe tu enlace o mensaje...">
-        <button onclick="generarQR()">GENERAR</button>
-        <div class="qr-box">
-            <img id="qrimg" alt="QR Code">
-        </div>
+      <h1>⚡ QR CODE GENERATOR ⚡</h1>
+      <input id="qr" type="text" placeholder="Escribe tu enlace o mensaje...">
+      <button onclick="generarQR()">GENERAR</button>
+      <div class="qr-box">
+        <img id="qrimg" alt="QR Code">
+      </div>
     </div>
+    <footer>🔧 Diseñado por <strong>Ren</strong></footer>
+  </main>
 
-    <script>
-        function generarQR() {
-            const input = document.getElementById('qr').value.trim();
-            const qrimg = document.getElementById('qrimg');
-            if (input !== "") {
-                qrimg.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(input)}`;
-            }
-        }
-    </script>
+  <script>
+    function generarQR() {
+      const input = document.getElementById('qr').value.trim();
+      const qrimg = document.getElementById('qrimg');
+      if (input !== "") {
+        qrimg.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(input)}`;
+      }
+    }
+  </script>
 </body>
 </html>
+
 
