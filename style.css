@@ -1,26 +1,36 @@
-body, html {
+/* GENERAL */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
   font-family: 'Orbitron', sans-serif;
   background: radial-gradient(circle at top left, #0f172a, #020617);
   color: #00eaff;
-  height: 100%;
-}
-
-.wrapper {
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
 }
 
+/* WRAPPER para centrar todo */
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+
+/* CAJA PRINCIPAL */
 .container {
   background: #1e293b;
   padding: 40px 30px;
   border-radius: 16px;
-  width: 100%;
+  width: 90%;
   max-width: 400px;
   box-shadow: 0 0 25px #00eaff55;
   display: flex;
@@ -31,9 +41,7 @@ body, html {
 
 h1 {
   font-size: 1.6em;
-  color: #00eaff;
   text-shadow: 0 0 10px #00eaff88;
-  text-align: center;
 }
 
 input {
@@ -77,10 +85,11 @@ img {
   height: 200px;
 }
 
+/* FOOTER */
 footer {
-  margin-top: 30px;
+  margin-top: 20px;
   font-size: 0.9em;
   color: #38bdf8;
   text-shadow: 0 0 6px #00eaff99;
-  text-align: center;
 }
+
